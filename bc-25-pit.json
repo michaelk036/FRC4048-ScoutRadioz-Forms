@@ -1,0 +1,200 @@
+[
+  {
+    "type": "derived",
+    "formula": "0",
+    "id": "Please log any changes to this file in https://github.com/Free-Robotics-Resources/Scoutradioz-scouting-questions"
+  },
+  {
+    "type": "derived",
+    "formula": "0",
+    "id": "This is a Comment!"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Drive Base"
+  },
+  {
+    "type": "multiselect",
+    "label": "Drive Base Type",
+    "options": [
+      "Swerve",
+      "Tank",
+      "Mecanum",
+      "Other"
+    ],
+    "id": "driveBaseType"
+  },
+  {
+    "type": "textblock",
+    "label": "Drive Base Notes",
+    "id": "driveBaseNotes"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Coral"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they intake Coral from the Feeder Station?",
+    "id": "pickUpSource"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they intake Coral from the Ground?",
+    "id": "pickUpGround"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they score L1?",
+    "id": "L1"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they score L2?",
+    "id": "L2"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they score L3?",
+    "id": "L3"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they score L4?",
+    "id": "L4"
+  },
+  {
+    "type": "textblock",
+    "label": "Scoring Notes",
+    "id": "scoringNotes"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Algae"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they intake Algae from the ground?",
+    "id": "algaeGroundIntake"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they intake Algae from the Reef?",
+    "id": "algaeReefIntake"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they knock Algae off the Reef?",
+    "id": "algaeReefKnock"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can they Score Processer?",
+    "id": "algaeProcesser"
+  },
+  {
+    "type": "checkbox",
+    "label": "Can their Robot Score Net?",
+    "id": "algaeNet"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Cage"
+  },
+  {
+    "type": "checkbox",
+    "label": "Shallow Climb?",
+    "id": "climbShallow"
+  },
+  {
+    "type": "checkbox",
+    "label": "Deep Climb?",
+    "id": "climbDeep"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Auto"
+  },
+  {
+    "type": "image",
+    "image_id": "field"
+  },
+  {
+    "type": "header",
+    "label": "Autonomous Runs"
+  },
+  {
+    "type": "checkbox",
+    "label": "Auto Runs in AP?",
+    "id": "autoFriendSourceRun"
+  },
+  {
+    "type": "checkbox",
+    "label": "Auto Runs in M?",
+    "id": "autoMiddleRun"
+  },
+  {
+    "type": "checkbox",
+    "label": "Auto Runs in OP?",
+    "id": "autoOpponentSourceRun"
+  },
+  {
+    "type": "textblock",
+    "label": "Auto Run Plays (List what they can do in auto)",
+    "id": "autoRunNotes"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Driver Section"
+  },
+  {
+    "type": "multiselect",
+    "label": "New or Old Driveteam?",
+    "options": [
+      "New Driveteam for Battlecry",
+      "Old Driveteam from Reefscape",
+      "No information"
+    ],
+    "id": "driverExperience"
+  },
+  {
+    "type": "textblock",
+    "label": "Additional Driver Notes",
+    "id": "driverNotes"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Comment Section"
+  },
+  {
+    "type": "checkbox",
+    "label": "Do you want to join a Scouting Alliance?",
+    "id": "allianceInterest"
+  },
+  {
+    "type": "textblock",
+    "label": "Comments",
+    "id": "comment"
+  }
+]
