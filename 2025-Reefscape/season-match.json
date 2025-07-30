@@ -2,12 +2,7 @@
   {
     "type": "derived",
     "formula": "0",
-    "id": "Please log any changes to this file in https://github.com/Free-Robotics-Resources/Scoutradioz-scouting-questions"
-  },
-  {
-    "type": "derived",
-    "formula": "0",
-    "id": "This is a Comment!"
+    "id": "This form (or a slightly modifed version of it) was used for match scouting during Greater Boston, Hartform and NEDCMP"
   },
   {
     "type": "header",
@@ -16,7 +11,7 @@
   {
     "type": "image",
     "image_id": "fieldTrident"
-  },
+},
   {
     "type": "multiselect",
     "label": "Starting Position",
@@ -194,7 +189,7 @@
   },
   {
     "type": "derived",
-    "formula": "teleopL1 * 2 + teleopL2 * 3 + (teleopL3 + teleopNet) * 4 + teleopL4 * 5 + teleopProcessor * 2",
+    "formula":"teleopL1 * 2 + teleopL2 * 3 + (teleopL3 + teleopNet) * 4 + teleopL4 * 5 + teleopProcessor * 2",
     "id": "TeleopPoints"
   },
   {

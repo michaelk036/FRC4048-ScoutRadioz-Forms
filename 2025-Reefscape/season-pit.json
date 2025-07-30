@@ -1,0 +1,211 @@
+[
+    {
+        "type": "header",
+        "label": "Drive Base",
+        "id": "driveBase"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "multiselect",
+        "label": "Drive base type",
+        "options": [
+            "Swerve",
+            "Tank",
+            "Mecanum",
+            "Other"
+        ],
+        "id": "driveBaseType"
+    },
+    {
+        "type": "textblock",
+        "label": "Other Drive base",
+        "id": "driveBaseTypes"
+    },
+    {
+        "type": "slider",
+        "label": "Robot Length w/Bumpers (in)",
+        "id": "driveBaseLength",
+        "options": {
+            "min": 20,
+            "max": 40,
+            "step": 1
+        },
+        "variant": "standard"
+    },
+    {
+        "type": "slider",
+        "label": "Robot Width w/Bumpers (in)",
+        "id": "driveBaseWidth",
+        "options": {
+            "min": 20,
+            "max": 40,
+            "step": 1
+        },
+        "variant": "standard"
+    },
+    {
+        "type": "header",
+        "label": "Intaking",
+        "id": "intake"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they intake Coral from the Source?",
+        "id": "pickUpSource"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they intake Coral from the Ground?",
+        "id": "pickUpGround"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they Remove Algae from Reef?",
+        "id": "algaeReef"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can They Pickup Algae?",
+        "id": "algaeIntake"
+    },
+    {
+        "type": "header",
+        "label": "Scoring",
+        "id": "scoring"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they score L1?",
+        "id": "L1"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they score L2?",
+        "id": "L2"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they score L3?",
+        "id": "L3"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they score L4?",
+        "id": "L4"
+    },
+    {
+        "type": "multiselect",
+        "label": "Preferred Level",
+        "options": [
+            "None",
+            "L4",
+            "L3",
+            "L2",
+            "L1"
+        ],
+        "id": "1stPreference"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they Score Processer?",
+        "id": "algaeProcesser"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can their Robot Score Net?",
+        "id": "algaeNet"
+    },
+    {
+        "type": "header",
+        "label": "Cage",
+        "id": "cage"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "checkbox",
+        "label": "Shallow Climb?",
+        "id": "climbShallow"
+    },
+    {
+        "type": "checkbox",
+        "label": "Deep Climb?",
+        "id": "climbDeep"
+    },
+    {
+        "type": "multiselect",
+        "label": "Preferred Climb",
+        "options": [
+            "Deep",
+            "Shallow",
+            "None"
+        ],
+        "id": "climbPreference"
+    },
+    {
+        "type": "header",
+        "label": "Auto",
+        "id": "autoTitlte"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "image",
+        "image_id": "field"
+    },
+    {
+        "type": "header",
+        "label": "Autonomous Runs",
+        "id": "autoRuns"
+    },
+    {
+        "type": "checkbox",
+        "label": "Auto Runs in AP?",
+        "id": "autoFriendSourceRun"
+    },
+    {
+        "type": "checkbox",
+        "label": "Auto Runs in M?",
+        "id": "autoMiddleRun"
+    },
+    {
+        "type": "checkbox",
+        "label": "Auto Runs in OP?",
+        "id": "autoOpponentSourceRun"
+    },
+    {
+        "type": "textblock",
+        "label": "Auto Run Plays (List what they can do in auto)",
+        "id": "autoRunNotes"
+    },
+    {
+        "type": "header",
+        "label": "Drive Team",
+        "id": "driveTeam"
+    },
+    {
+        "type": "textblock",
+        "label": "How experienced is their Drive Team with their current robot? Please Elaborate.",
+        "id": "driveExperience"
+    },
+    {
+        "type": "header",
+        "label": "Comment Section",
+        "id": "lblcomment"
+    },
+    {
+        "type": "textblock",
+        "label": "Comments",
+        "id": "comment"
+    }
+]

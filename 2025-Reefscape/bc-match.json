@@ -1,0 +1,230 @@
+[
+  {
+    "type": "derived",
+    "formula": "0",
+    "id": "This form was used to Scout Matches, during Battlecry 25"
+  },
+  {
+    "type": "header",
+    "label": "Pre-Match Info"
+  },
+  {
+    "type": "image",
+    "image_id": "fieldTrident"
+  },
+  {
+    "type": "multiselect",
+    "label": "Starting Position",
+    "options": [
+      "Not Present",
+      "AP",
+      "M",
+      "OP"
+    ],
+    "id": "preMatchStart"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Autonomous"
+  },
+  {
+    "type": "subheader",
+    "label": "Auto Coral"
+  },
+  {
+    "type": "counter",
+    "label": "Level 1",
+    "id": "autoL1",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Level 2",
+    "id": "autoL2",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Level 3",
+    "id": "autoL3",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Level 4",
+    "id": "autoL4",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "subheader",
+    "label": "Auto Algae"
+  },
+  {
+    "type": "counter",
+    "label": "Processor",
+    "id": "autoProcessor",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Net",
+    "id": "autoNet",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Teleop"
+  },
+  {
+    "type": "subheader",
+    "label": "Teleop Coral"
+  },
+  {
+    "type": "checkbox",
+    "label": "Did they pick up Coral from the Station?",
+    "id": "teleopSource"
+  },
+  {
+    "type": "checkbox",
+    "label": "Did they pick up Coral off the Ground?",
+    "id": "teleopFloor"
+  },
+  {
+    "type": "counter",
+    "label": "Level 1",
+    "id": "teleopL1",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Level 2",
+    "id": "teleopL2",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Level 3",
+    "id": "teleopL3",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Level 4",
+    "id": "teleopL4",
+    "allow_negative": true,
+    "variant": "standard"
+  },
+  {
+    "type": "subheader",
+    "label": "Teleop Algae"
+  },
+  {
+    "type": "checkbox",
+    "label": "Did they knock off Algae from the Reef?",
+    "id": "teleopKnockAlgae"
+  },
+  {
+    "type": "counter",
+    "label": "Algae Scored in Processor",
+    "id": "teleopProcessor",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "counter",
+    "label": "Algae ROBOT Scored in Net",
+    "id": "teleopNet",
+    "allow_negative": false,
+    "variant": "standard"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "Endgame"
+  },
+  {
+    "type": "multiselect",
+    "label": "Stage Status of robot at end of match:",
+    "options": [
+      "Not Parked",
+      "Parked",
+      "Shallow Cage",
+      "Deep Cage"
+    ],
+    "id": "endgameBarge"
+  },
+  {
+    "type": "spacer"
+  },
+  {
+    "type": "header",
+    "label": "General"
+  },
+  {
+    "type": "checkbox",
+    "label": "Did they play defense?",
+    "id": "otherDefense"
+  },
+  {
+    "type": "textblock",
+    "label": "Comments:",
+    "id": "otherNotes"
+  },
+  {
+    "type": "derived",
+    "formula": "teleopL1 * 2 + teleopL2 * 3 + (teleopL3 + teleopNet) * 4 + teleopL4 * 5 + teleopProcessor * 2",
+    "id": "TeleopPoints"
+  },
+  {
+    "type": "derived",
+    "formula": "autoL1 * 3 + (autoL2 + autoNet) * 4 + (autoL3 + autoProcessor) * 6 + autoL4 * 7",
+    "id": "AutonPoints"
+  },
+  {
+    "type": "derived",
+    "formula": "multiselect(endgameBarge, 'Not Parked', 0, 'Parked', 2, 'ShallowCage', 6, 'Deep Cage', 12)",
+    "id": "EndgamePoints"
+  },
+  {
+    "type": "derived",
+    "formula": "TeleopPoints + AutonPoints + EndgamePoints",
+    "id": "contributedPoints"
+  },
+  {
+    "type": "derived",
+    "formula": "teleopL1 * 2 + (teleopL2 + autoL1) * 3 + (teleopL3 + autoL2) * 4 + teleopL4 * 5 + autoL3 * 6 + autoL4 * 7",
+    "id": "CoralPoints"
+  },
+  {
+    "type": "derived",
+    "formula": "(autoNet + teleopNet) * 4 + (autoProcessor + teleopProcessor) * 6",
+    "id": "AlgaePoints"
+  },
+  {
+    "type": "derived",
+    "formula": "autoL1 + autoL2 + autoL3 + autoL4 + teleopL1 + teleopL2 + teleopL3 + teleopL4",
+    "id": "totalCoralScored"
+  },
+  {
+    "type": "derived",
+    "formula": "autoNet + teleopNet + autoProcessor + teleopProcessor",
+    "id": "totalAlgaeScored"
+  }
+]

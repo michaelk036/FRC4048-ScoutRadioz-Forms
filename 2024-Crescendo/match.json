@@ -1,0 +1,754 @@
+[
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "didStartingZone",
+            2
+          ],
+          "as": "startingZone"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoAmp",
+            2
+          ],
+          "as": "autoA"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoSpeaker",
+            5
+          ],
+          "as": "autoS"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopSpeaker",
+            2
+          ],
+          "as": "teleopS"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopAmpSpeaker",
+            5
+          ],
+          "as": "teleopAmpS"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopTrap",
+            5
+          ],
+          "as": "teleopT"
+        },
+        {
+          "operator": "multiselect",
+          "id": "endgameStage",
+          "quantifiers": {
+            "Not Parked": 0,
+            "Parked": 1,
+            "On Stage": 3,
+            "On Stage Harmony with 1 Robot": 4,
+            "On Stage Harmony with 2 Robots": 4.33333
+          },
+          "as": "endgameSt"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$startingZone",
+            "$autoA",
+            "$autoS",
+            "teleopAmp",
+            "$teleopS",
+            "$teleopAmpS",
+            "$teleopT",
+            "endgameSpotlit",
+            "$endgameSt"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total contributed points",
+      "id": "contributedPoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "didStartingZone",
+            2
+          ],
+          "as": "startingZone"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoAmp",
+            2
+          ],
+          "as": "autoA"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoSpeaker",
+            5
+          ],
+          "as": "autoS"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$startingZone",
+            "$autoA",
+            "$autoS"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Auto Points",
+      "id": "totalAutoPoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopSpeaker",
+            2
+          ],
+          "as": "teleopS"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopAmpSpeaker",
+            5
+          ],
+          "as": "teleopAmpS"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "teleopAmp",
+            "$teleopS",
+            "$teleopAmpS"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Teleop Points",
+      "id": "totalTeleopPoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopTrap",
+            5
+          ],
+          "as": "teleopT"
+        },
+        {
+          "operator": "multiselect",
+          "id": "endgameStage",
+          "quantifiers": {
+            "Not Parked": 0,
+            "Parked": 1,
+            "On Stage": 3,
+            "On Stage Harmony with 1 Robot": 4,
+            "On Stage Harmony with 2 Robots": 4.333333
+          },
+          "as": "endgameSt"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$teleopT",
+            "endgameSpotlit",
+            "$endgameSt"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Endgame Points",
+      "id": "totalEndgamePoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "autoAmp",
+            "autoSpeaker"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Auto Notes",
+      "id": "totalAutoNotes"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "teleopAmp",
+            "teleopSpeaker",
+            "teleopAmpSpeaker"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Teleop Notes",
+      "id": "totalTeleopNotes"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "autoAmp",
+            "autoSpeaker",
+            "teleopAmp",
+            "teleopSpeaker",
+            "teleopAmpSpeaker"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Notes",
+      "id": "totalNotes"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "divide",
+          "operands": [
+            "autoCenterGrab",
+            12
+          ],
+          "as": "useCenterGrab"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "$useCenterGrab",
+            10
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Auto Center Speed Factor",
+      "id": "autoCenterSpeedFactor"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiselect",
+          "id": "preMatchStart",
+          "quantifiers": {
+            "Not There": 0,
+            "Source Side": 1,
+            "Middle": 0,
+            "Amp Side": 0
+          }
+        }
+      ],
+      "display_as": "percentage",
+      "label": "Pre-Match Source",
+      "id": "startSource"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiselect",
+          "id": "preMatchStart",
+          "quantifiers": {
+            "Not There": 0,
+            "Source Side": 0,
+            "Middle": 1,
+            "Amp Side": 0
+          }
+        }
+      ],
+      "display_as": "percentage",
+      "label": "Pre-Match Middle",
+      "id": "startMiddle"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiselect",
+          "id": "preMatchStart",
+          "quantifiers": {
+            "Not There": 0,
+            "Source Side": 0,
+            "Middle": 0,
+            "Amp Side": 1
+          }
+        }
+      ],
+      "display_as": "percentage",
+      "label": "Pre-Match Amp",
+      "id": "startAmp"
+    },
+    {
+      "type": "h2",
+      "label": "Pre-Match Info",
+      "id": "lblPrematch"
+    },
+    {
+      "type": "multiselect",
+      "label": "Starting Position",
+      "options": [
+        "Not There",
+        "Source Side",
+        "Middle",
+        "Amp Side"
+      ],
+      "id": "preMatchStart"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "Autonomous",
+      "id": "lblAuto"
+    },
+    {
+      "type": "checkbox",
+      "label": "Did they leave starting zone?",
+      "id": "didStartingZone"
+    },
+    {
+      "type": "timeslider",
+      "label": "How much time was on the clock when they reached a center note for the first time?",
+      "id": "autoCenterGrab",
+      "options": {
+        "min": 0,
+        "max": 15,
+        "step": -1
+      }
+    },
+    {
+      "type": "h3",
+      "label": "Auto Notes",
+      "id": "lblAutoNotes"
+    },
+    {
+      "type": "counter",
+      "label": "Notes scored in Amp",
+      "id": "autoAmp"
+    },
+    {
+      "type": "counter",
+      "label": "Notes Scored in Speaker",
+      "id": "autoSpeaker"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "max",
+          "operands": [
+            "onStageTimeStart",
+            "onStageTimeEnd"
+          ],
+          "as": "useStageTime"
+        },
+        {
+          "operator": "subtract",
+          "operands": [
+            135,
+            "$useStageTime"
+          ],
+          "as": "timeWithoutStage"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "teleopAmp",
+            "teleopSpeaker",
+            "teleopAmpSpeaker",
+            "teleopTrap"
+          ],
+          "as": "totalTeleop"
+        },
+        {
+          "operator": "divide",
+          "operands": [
+            "$timeWithoutStage",
+            "$totalTeleop"
+          ],
+          "as": "interimCycleTime"
+        },
+        {
+          "operator": "condition",
+          "operands": [
+            "$interimCycleTime",
+            "$interimCycleTime",
+            160
+          ],
+          "as": "cycleTime"
+        },
+        {
+          "operator": "log",
+          "operands": [
+            "$cycleTime",
+            1.4142135623731
+          ],
+          "as": "logFactor"
+        },
+        {
+          "operator": "subtract",
+          "operands": [
+            14.6464466094067,
+            "$logFactor"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Cycle Speed Factor",
+      "id": "cycleSpeedFactor"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "autoAmp",
+            "teleopAmp"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Amp Notes",
+      "id": "totalAmpNotes"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "autoSpeaker",
+            "teleopSpeaker"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Speaker Notes",
+      "id": "totalSpeakerNotes"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "subtract",
+          "operands": [
+            "onStageTimeStart",
+            "onStageTimeEnd"
+          ],
+          "as": "onStageTime"
+        },
+        {
+          "operator": "abs",
+          "operands": [
+            "$onStageTime"
+          ],
+          "as": "absOnStageTime"
+        },
+        {
+          "operator": "max",
+          "operands": [
+            "$absOnStageTime",
+            5
+          ],
+          "as": "useOnStageTime"
+        },
+        {
+          "operator": "log",
+          "operands": [
+            "$useOnStageTime",
+            1.4142135623731
+          ],
+          "as": "logFactor"
+        },
+        {
+          "operator": "subtract",
+          "operands": [
+            14.6464466094067,
+            "$logFactor"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "On Stage Speed Factor",
+      "id": "onStageSpeedFactor"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "max",
+          "operands": [
+            "onStageTimeStart",
+            "onStageTimeEnd"
+          ],
+          "as": "useOnStageTime"
+        },
+        {
+          "operator": "subtract",
+          "operands": [
+            135,
+            "$useOnStageTime"
+          ],
+          "as": "timeWithoutStage"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "teleopAmp",
+            "teleopSpeaker",
+            "teleopAmpSpeaker",
+            "teleopTrap"
+          ],
+          "as": "totalTeleop"
+        },
+        {
+          "operator": "divide",
+          "operands": [
+            "$timeWithoutStage",
+            "$totalTeleop"
+          ],
+          "as": "interimCycleTime"
+        },
+        {
+          "operator": "condition",
+          "operands": [
+            "$interimCycleTime",
+            "$interimCycleTime",
+            160
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Cycle Time",
+      "id": "cycleTime"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "Teleop",
+      "id": "lblTeleop"
+    },
+    {
+      "type": "checkbox",
+      "label": "Did they pick up from the Source?",
+      "id": "teleopSource"
+    },
+    {
+      "type": "checkbox",
+      "label": "Did they pick up from the Floor?",
+      "id": "teleopFloor"
+    },
+    {
+      "type": "h3",
+      "label": "Human Player",
+      "id": "lblHumanPlayer"
+    },
+    {
+      "type": "checkbox",
+      "label": "Was Coopertition Made?",
+      "id": "teleopCoop"
+    },
+    {
+      "type": "counter",
+      "label": "How many times was the speaker amplified?",
+      "id": "teleopAmplified"
+    },
+    {
+      "type": "h3",
+      "label": "Teleop Notes",
+      "id": "lblTeleopNotes"
+    },
+    {
+      "type": "counter",
+      "label": "Notes scored in Amp",
+      "id": "teleopAmp"
+    },
+    {
+      "type": "counter",
+      "label": "Notes Scored in Speaker",
+      "id": "teleopSpeaker"
+    },
+    {
+      "type": "counter",
+      "label": "Notes scored in Amplified Speaker",
+      "id": "teleopAmpSpeaker"
+    },
+    {
+      "type": "counter",
+      "label": "Notes Scored in Trap(1/Trap  Max:3)",
+      "id": "teleopTrap"
+    },
+    {
+      "type": "counter",
+      "label": "Notes Passed into Wing",
+      "id": "teleopPassedNotes"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "Endgame",
+      "id": "lblEndgame"
+    },
+    {
+      "type": "timeslider",
+      "label": "How much time was on the clock when they started climbing?",
+      "id": "onStageTimeStart",
+      "options": {
+        "min": 0,
+        "max": 90,
+        "step": -5
+      }
+    },
+    {
+      "type": "timeslider",
+      "label": "How much time was on the clock when they stopped climbing?",
+      "id": "onStageTimeEnd",
+      "options": {
+        "min": 0,
+        "max": 90,
+        "step": -5
+      }
+    },
+    {
+      "type": "multiselect",
+      "label": "Stage Status of robot at end of match:",
+      "options": [
+        "Not Parked",
+        "Parked",
+        "On Stage",
+        "On Stage Harmony with 1 Robot",
+        "On Stage Harmony with 2 Robots"
+      ],
+      "id": "endgameStage"
+    },
+    {
+      "type": "checkbox",
+      "label": "Robot Spotlit (High Note on same stage as Robot)",
+      "id": "endgameSpotlit"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "General",
+      "id": "lblGeneral"
+    },
+    {
+      "type": "checkbox",
+      "label": "Died during the match (or never started)?",
+      "id": "diedDuringMatch"
+    },
+    {
+      "type": "checkbox",
+      "label": "Recovered from freeze?",
+      "id": "recoveredFromFreeze"
+    },
+    {
+      "type": "checkbox",
+      "label": "Played defense?",
+      "id": "playedDefense"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            0.5,
+            "recoveredFromFreeze"
+          ],
+          "as": "recover"
+        },
+        {
+          "operator": "subtract",
+          "operands": [
+            1,
+            "diedDuringMatch"
+          ],
+          "as": "1minusdied"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$1minusdied",
+            "$recover"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Reliability factor",
+      "id": "reliabilityFactor"
+    },
+    {
+      "type": "multiselect",
+      "label": "Robot Role",
+      "options": [
+        "N/A",
+        "Mainly Speaker",
+        "Mainly Amp",
+        "General Scorer",
+        "Defense",
+        "Non-Defense Support"
+      ],
+      "id": "role"
+    },
+    {
+      "type": "textblock",
+      "label": "What was their strategy?",
+      "id": "roleStrategy"
+    },
+    {
+      "type": "checkbox",
+      "label": "Ignore this",
+      "id": "outstandingPerformance"
+    },
+    {
+      "type": "textblock",
+      "label": "Other comments and notes:",
+      "id": "otherNotes"
+    }
+  ]
